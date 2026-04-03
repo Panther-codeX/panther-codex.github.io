@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ogmail.tech | Coming Soon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>egmail.me - Coming Soon</title>
     <style>
         * {
             margin: 0;
@@ -12,24 +12,24 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             padding: 20px;
         }
 
         .container {
-            background: white;
-            border-radius: 20px;
-            padding: 50px 40px;
             max-width: 600px;
             width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             text-align: center;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            animation: fadeIn 0.8s ease-out;
+            animation: fadeIn 0.8s ease-in;
         }
 
         @keyframes fadeIn {
@@ -43,113 +43,345 @@
             }
         }
 
+        .logo {
+            font-size: 64px;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
         h1 {
-            font-size: 2.5rem;
+            font-size: 42px;
             color: #333;
             margin-bottom: 15px;
+            letter-spacing: -1px;
         }
 
         .domain {
             color: #667eea;
-            font-weight: 600;
-            font-size: 1.2rem;
-            margin-bottom: 25px;
             word-break: break-all;
         }
 
-        .status {
-            display: inline-block;
-            background: #10b981;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
+        .tagline {
+            font-size: 18px;
+            color: #666;
             margin-bottom: 30px;
+            line-height: 1.6;
         }
 
-        p {
+        .coming-soon {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: 30px;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+
+        .progress-bar-container {
+            background: #e0e0e0;
+            border-radius: 50px;
+            height: 10px;
+            margin: 30px 0;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            width: 75%;
+            height: 100%;
+            border-radius: 50px;
+            animation: progress 2s ease-out;
+        }
+
+        @keyframes progress {
+            from { width: 0; }
+            to { width: 75%; }
+        }
+
+        .progress-text {
             color: #666;
-            line-height: 1.6;
-            margin-bottom: 20px;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
         }
 
         .features {
             display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
             justify-content: center;
-            margin: 30px 0;
+            gap: 30px;
+            margin: 40px 0 20px;
+            flex-wrap: wrap;
         }
 
         .feature {
-            background: #f8f9fa;
-            padding: 10px 20px;
-            border-radius: 10px;
-            font-size: 0.9rem;
-            color: #555;
+            text-align: center;
         }
 
-        .feature::before {
-            content: "✓ ";
-            color: #10b981;
-            font-weight: bold;
+        .feature-icon {
+            font-size: 28px;
+            margin-bottom: 8px;
         }
 
-        .contact {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            font-size: 0.9rem;
+        .feature-text {
+            font-size: 12px;
             color: #888;
         }
 
-        a {
-            color: #667eea;
-            text-decoration: none;
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #aaa;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .notification {
+            margin-top: 20px;
+            padding: 12px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .email-input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 14px;
+            margin-top: 10px;
+            transition: border-color 0.3s;
+        }
+
+        .email-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .notify-btn {
+            width: 100%;
+            margin-top: 10px;
+            padding: 12px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .notify-btn:hover {
+            background: #5a67d8;
         }
 
         @media (max-width: 480px) {
             .container {
                 padding: 30px 20px;
             }
+            
             h1 {
-                font-size: 1.8rem;
+                font-size: 32px;
+            }
+            
+            .btn {
+                padding: 12px 24px;
+                font-size: 14px;
+            }
+            
+            .button-group {
+                gap: 10px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>✨ ogmail.tech</h1>
-        <div class="domain">Your trusted email & tech domain</div>
-        <div class="status">✓ Website Active</div>
+        <div class="logo">📧</div>
+        <h1>
+            <span class="domain">egmail.me</span>
+        </h1>
+        <div class="coming-soon">🚀 COMING SOON</div>
+        <p class="tagline">
+            A modern, secure, and fast email service<br>
+            Built for the future of communication
+        </p>
         
-        <p>
-            <strong>Welcome to ogmail.tech!</strong><br>
-            This domain is configured and ready. Your website is now live using 
-            GitHub Pages with Cloudflare DNS.
-        </p>
-
-        <div class="features">
-            <span class="feature">Custom Email Ready</span>
-            <span class="feature">Cloudflare Secured</span>
-            <span class="feature">GitHub Powered</span>
+        <div class="progress-bar-container">
+            <div class="progress-bar"></div>
         </div>
-
-        <p>
-            🚀 <strong>What's next?</strong><br>
-            Replace this page with your own <code>index.html</code> file.
-            Your email at <strong>@ogmail.tech</strong> is already configured.
-        </p>
-
-        <div class="contact">
-            📧 Contact: <a href="mailto:admin@ogmail.tech">admin@ogmail.tech</a>
+        <div class="progress-text">Launching in progress... 75% complete</div>
+        
+        <div class="button-group">
+            <button class="btn btn-primary" onclick="openSite('https://www.egmail.me')">
+                🌐 Check egmail.me
+            </button>
+            <button class="btn btn-secondary" onclick="openSite('https://www.ogmail.me')">
+                🔍 Check ogmail.me
+            </button>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🔒</div>
+                <div class="feature-text">Secure & Private</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-text">Lightning Fast</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">💾</div>
+                <div class="feature-text">10GB Storage</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📱</div>
+                <div class="feature-text">Mobile Ready</div>
+            </div>
+        </div>
+        
+        <div class="notification">
+            📢 Want to know when we launch?
+            <input type="email" class="email-input" id="notifyEmail" placeholder="Enter your email">
+            <button class="notify-btn" onclick="notifyMe()">Notify Me When Live</button>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 egmail.me - All rights reserved</p>
+            <p style="margin-top: 5px;">Premium email service coming to you soon</p>
         </div>
     </div>
+    
+    <script>
+        function openSite(url) {
+            // Open in new tab
+            window.open(url, '_blank');
+            
+            // Optional: Show a message if the site isn't live yet
+            setTimeout(function() {
+                alert('If the site doesn\'t load, it means it\'s still under construction. Please check back soon! 🚀');
+            }, 2000);
+        }
+        
+        function notifyMe() {
+            const email = document.getElementById('notifyEmail').value;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!email) {
+                alert('Please enter your email address');
+                return;
+            }
+            
+            if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            // Save to localStorage or send to backend (you can modify this)
+            let subscribers = JSON.parse(localStorage.getItem('subscribers') || '[]');
+            
+            if (!subscribers.includes(email)) {
+                subscribers.push(email);
+                localStorage.setItem('subscribers', JSON.stringify(subscribers));
+                alert('Thank you! We\'ll notify you when egmail.me launches! 🎉');
+                document.getElementById('notifyEmail').value = '';
+            } else {
+                alert('You\'re already subscribed! We\'ll notify you soon.');
+            }
+            
+            // You can also send this to your backend API here
+            // Example:
+            // fetch('/api/subscribe', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify({ email: email })
+            // });
+        }
+        
+        // Add smooth scroll and animation on load
+        window.addEventListener('load', function() {
+            console.log('🚀 egmail.me landing page loaded');
+            
+            // Check if sites are reachable (optional)
+            function checkSite(url) {
+                fetch(url, { mode: 'no-cors' })
+                    .then(() => console.log(`${url} is reachable`))
+                    .catch(() => console.log(`${url} is not yet available`));
+            }
+            
+            // Uncomment to check site status (may show CORS errors in console, that's normal)
+            // checkSite('https://www.egmail.me');
+            // checkSite('https://www.ogmail.me');
+        });
+        
+        // Add some interactive hover effects
+        const buttons = document.querySelectorAll('.btn');
+        buttons.forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+            btn.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
 </body>
 </html>
