@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>egmail.me - Coming Soon</title>
+    <title>Shiza's Cheer Up Corner ✨</title>
     <style>
         * {
             margin: 0;
@@ -12,376 +12,614 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
+            background: linear-gradient(145deg, #fff9f0 0%, #ffe6f0 100%);
+            font-family: 'Poppins', 'Segoe UI', system-ui, -apple-system, 'Quicksand', sans-serif;
             display: flex;
-            justify-content: center;
             align-items: center;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 600px;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 40px 30px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            animation: fadeIn 0.8s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .logo {
-            font-size: 64px;
-            margin-bottom: 20px;
-            display: inline-block;
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        h1 {
-            font-size: 42px;
-            color: #333;
-            margin-bottom: 15px;
-            letter-spacing: -1px;
-        }
-
-        .domain {
-            color: #667eea;
-            word-break: break-all;
-        }
-
-        .tagline {
-            font-size: 18px;
-            color: #666;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-
-        .coming-soon {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 50px;
-            display: inline-block;
-            font-weight: bold;
-            margin-bottom: 30px;
-            font-size: 16px;
-            letter-spacing: 1px;
-        }
-
-        .progress-bar-container {
-            background: #e0e0e0;
-            border-radius: 50px;
-            height: 10px;
-            margin: 30px 0;
-            overflow: hidden;
-        }
-
-        .progress-bar {
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            width: 75%;
-            height: 100%;
-            border-radius: 50px;
-            animation: progress 2s ease-out;
-        }
-
-        @keyframes progress {
-            from { width: 0; }
-            to { width: 75%; }
-        }
-
-        .progress-text {
-            color: #666;
-            font-size: 14px;
-            margin-top: 10px;
-        }
-
-        .button-group {
-            display: flex;
-            gap: 15px;
             justify-content: center;
-            flex-wrap: wrap;
-            margin: 30px 0;
+            padding: 1.5rem;
+            position: relative;
+            overflow-x: hidden;
         }
 
-        .btn {
-            padding: 14px 32px;
-            font-size: 16px;
-            font-weight: 600;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
+        /* Cute floating elements background */
+        body::before {
+            content: "🌸✨💖🎀";
+            font-size: 80px;
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            opacity: 0.08;
+            white-space: nowrap;
+            pointer-events: none;
+            width: 100%;
+            text-align: center;
+            letter-spacing: 30px;
+            transform: rotate(-5deg);
+        }
+
+        /* main card */
+        .card {
+            max-width: 900px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(3px);
+            border-radius: 68px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 8px 20px rgba(241, 147, 187, 0.2);
+            overflow: hidden;
             transition: all 0.3s ease;
-            text-decoration: none;
+            border: 1px solid rgba(255, 215, 225, 0.7);
+            animation: floatIn 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+
+        @keyframes floatIn {
+            0% {
+                opacity: 0;
+                transform: translateY(40px) scale(0.96);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* header section */
+        .hero {
+            background: linear-gradient(135deg, #ffb7c5 0%, #ff8da1 100%);
+            padding: 2rem 2rem 1.8rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "🐻‍❄️";
+            position: absolute;
+            bottom: -20px;
+            right: 30px;
+            font-size: 55px;
+            opacity: 0.3;
+            transform: rotate(10deg);
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            letter-spacing: -0.3px;
+            word-break: keep-all;
+        }
+
+        .hero h1 span {
+            display: inline-block;
+            animation: bounceLove 1.2s infinite ease;
+        }
+
+        @keyframes bounceLove {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+
+        .hero p {
+            color: #fff5f7;
+            font-weight: 500;
+            margin-top: 12px;
+            font-size: 1.2rem;
+            backdrop-filter: blur(2px);
+        }
+
+        /* apology cute message */
+        .apology-box {
+            background: #fffef7;
+            margin: 1.5rem 2rem 0.5rem 2rem;
+            padding: 1rem 1.4rem;
+            border-radius: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            box-shadow: 0 8px 18px rgba(255, 105, 130, 0.1);
+            border: 1px solid #ffe2ea;
+        }
+
+        .apology-text {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #c06c84;
+            background: #fff0f3;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .apology-text i {
+            font-size: 1.4rem;
+        }
+
+        /* video gallery grid */
+        .video-gallery {
+            padding: 1.8rem 2rem 2.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+        }
+
+        /* each video item */
+        .video-item {
+            background: #ffffffcc;
+            backdrop-filter: blur(8px);
+            border-radius: 44px;
+            overflow: hidden;
+            box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.25s ease, box-shadow 0.3s;
+            border: 1px solid rgba(255, 192, 203, 0.5);
+        }
+
+        .video-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 22px 32px -12px rgba(255, 80, 120, 0.25);
+        }
+
+        /* video container with aspect ratio & auto adjustment */
+        .vid-container {
+            position: relative;
+            width: 100%;
+            background: #1e1a1f;
+            border-radius: 32px 32px 28px 28px;
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
+            /* ensures responsive 16:9, but videos will fit */
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #0a0a0a;
+            display: block;
+            transition: all 0.2s;
+        }
+
+        /* button row */
+        .button-row {
+            padding: 1rem 1.2rem 1.2rem 1.2rem;
+            background: rgba(255, 248, 245, 0.9);
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+            border-top: 1px solid #ffe2ed;
+        }
+
+        .play-btn {
+            background: linear-gradient(115deg, #ff8aa8, #ff6b8f);
+            border: none;
+            padding: 0.7rem 1.6rem;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            color: white;
             display: inline-flex;
             align-items: center;
             gap: 10px;
+            cursor: pointer;
+            box-shadow: 0 6px 0 #b3415f;
+            transition: all 0.12s linear;
+            letter-spacing: 0.5px;
         }
 
-        .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        .play-btn:active {
+            transform: translateY(2px);
+            box-shadow: 0 3px 0 #b3415f;
         }
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+        /* extra cute icons */
+        .play-btn i {
+            font-size: 1.2rem;
+            font-style: normal;
+            filter: drop-shadow(0 1px 1px rgba(0,0,0,0.1));
         }
 
-        .btn-secondary {
-            background: white;
-            color: #667eea;
-            border: 2px solid #667eea;
+        .note-text {
+            font-size: 0.75rem;
+            text-align: center;
+            margin-top: 6px;
+            color: #c47e94;
+            font-weight: 500;
         }
 
-        .btn-secondary:hover {
-            background: #667eea;
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        .btn:active {
-            transform: translateY(0);
-        }
-
-        .features {
+        /* footer */
+        .footer-message {
+            background: #ffeef3;
+            padding: 1rem 1.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #bf6f89;
+            font-weight: 500;
+            border-top: 1px dashed #ffccd9;
             display: flex;
+            align-items: center;
             justify-content: center;
-            gap: 30px;
-            margin: 40px 0 20px;
+            gap: 10px;
             flex-wrap: wrap;
         }
 
-        .feature {
+        .heart-animation {
+            display: inline-block;
+            animation: pulseHeart 0.9s infinite;
+        }
+
+        @keyframes pulseHeart {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        /* responsive touches */
+        @media (max-width: 640px) {
+            .card {
+                border-radius: 48px;
+            }
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            .video-gallery {
+                padding: 1.2rem;
+            }
+            .play-btn {
+                padding: 0.5rem 1.2rem;
+                font-size: 0.9rem;
+            }
+            .apology-box {
+                margin: 1rem 1rem 0;
+            }
+        }
+
+        /* For custom file error fallback - soft */
+        .error-fallback {
+            background: #ffe1e6;
+            border-radius: 24px;
+            padding: 8px 12px;
+            font-size: 0.7rem;
+            color: #bc6f86;
             text-align: center;
         }
 
-        .feature-icon {
-            font-size: 28px;
-            margin-bottom: 8px;
-        }
-
-        .feature-text {
-            font-size: 12px;
-            color: #888;
-        }
-
-        .footer {
-            margin-top: 30px;
-            font-size: 12px;
-            color: #aaa;
-            border-top: 1px solid #eee;
-            padding-top: 20px;
-        }
-
-        .notification {
-            margin-top: 20px;
-            padding: 12px;
-            background: #f0f0f0;
-            border-radius: 10px;
-            font-size: 14px;
-            color: #666;
-        }
-
-        .email-input {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
-            font-size: 14px;
-            margin-top: 10px;
-            transition: border-color 0.3s;
-        }
-
-        .email-input:focus {
+        button:focus, video:focus {
             outline: none;
-            border-color: #667eea;
-        }
-
-        .notify-btn {
-            width: 100%;
-            margin-top: 10px;
-            padding: 12px;
-            background: #667eea;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .notify-btn:hover {
-            background: #5a67d8;
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 30px 20px;
-            }
-            
-            h1 {
-                font-size: 32px;
-            }
-            
-            .btn {
-                padding: 12px 24px;
-                font-size: 14px;
-            }
-            
-            .button-group {
-                gap: 10px;
-            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">📧</div>
-        <h1>
-            <span class="domain">egmail.me</span>
-        </h1>
-        <div class="coming-soon">🚀 COMING SOON</div>
-        <p class="tagline">
-            A modern, secure, and fast email service<br>
-            Built for the future of communication
-        </p>
-        
-        <div class="progress-bar-container">
-            <div class="progress-bar"></div>
-        </div>
-        <div class="progress-text">Launching in progress... 75% complete</div>
-        
-        <div class="button-group">
-            <button class="btn btn-primary" onclick="openSite('https://www.egmail.me')">
-                🌐 Check egmail.me
-            </button>
-            <button class="btn btn-secondary" onclick="openSite('https://www.ogmail.me')">
-                🔍 Check ogmail.me
-            </button>
-        </div>
-        
-        <div class="features">
-            <div class="feature">
-                <div class="feature-icon">🔒</div>
-                <div class="feature-text">Secure & Private</div>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">⚡</div>
-                <div class="feature-text">Lightning Fast</div>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">💾</div>
-                <div class="feature-text">10GB Storage</div>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">📱</div>
-                <div class="feature-text">Mobile Ready</div>
-            </div>
-        </div>
-        
-        <div class="notification">
-            📢 Want to know when we launch?
-            <input type="email" class="email-input" id="notifyEmail" placeholder="Enter your email">
-            <button class="notify-btn" onclick="notifyMe()">Notify Me When Live</button>
-        </div>
-        
-        <div class="footer">
-            <p>© 2025 egmail.me - All rights reserved</p>
-            <p style="margin-top: 5px;">Premium email service coming to you soon</p>
-        </div>
+
+<div class="card">
+    <div class="hero">
+        <h1>🌸 For My <span>Shiza</span> 🌸</h1>
+        <p>✨ A little sunshine just for you ✨</p>
     </div>
     
-    <script>
-        function openSite(url) {
-            // Open in new tab
-            window.open(url, '_blank');
+    <div class="apology-box">
+        <div class="apology-text">
+            <i>🐣</i> Hey Shiza! I'm really sorry...
+        </div>
+        <div class="apology-text">
+            <i>💗</i> You mean the world to me!
+        </div>
+        <div class="apology-text">
+            <i>🎀</i> Please forgive me? 🥺
+        </div>
+    </div>
+
+    <div class="video-gallery">
+        <!-- Video 1 -->
+        <div class="video-item">
+            <div class="vid-container" id="vid1-container">
+                <video id="video1" preload="metadata" playsinline>
+                    <source src="/Sdcard/shiza/1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="button-row">
+                <button class="play-btn" data-video="video1">
+                    <i>🎬</i> Play Video 1
+                </button>
+                <button class="play-btn replay-btn" data-video="video1" data-replay="true">
+                    <i>🔄</i> Replay
+                </button>
+            </div>
+            <div class="note-text">💖 special memory for you 💖</div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="video-item">
+            <div class="vid-container" id="vid2-container">
+                <video id="video2" preload="metadata" playsinline>
+                    <source src="/Sdcard/shiza/2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="button-row">
+                <button class="play-btn" data-video="video2">
+                    <i>🎬</i> Play Video 2
+                </button>
+                <button class="play-btn replay-btn" data-video="video2" data-replay="true">
+                    <i>🔄</i> Replay
+                </button>
+            </div>
+            <div class="note-text">🌸 hugs and cute moments 🌸</div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="video-item">
+            <div class="vid-container" id="vid3-container">
+                <video id="video3" preload="metadata" playsinline>
+                    <source src="/Sdcard/shiza/3.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="button-row">
+                <button class="play-btn" data-video="video3">
+                    <i>🎬</i> Play Video 3
+                </button>
+                <button class="play-btn replay-btn" data-video="video3" data-replay="true">
+                    <i>🔄</i> Replay
+                </button>
+            </div>
+            <div class="note-text">🎀 you make everything better 🎀</div>
+        </div>
+    </div>
+
+    <div class="footer-message">
+        <span class="heart-animation">💗</span> Shiza, I made this site just for you! <span class="heart-animation">💗</span><br>
+        <span style="font-size:0.75rem;">(Tap any Play button to watch — videos from your device /Sdcard/shiza/)</span>
+    </div>
+</div>
+
+<script>
+    (function() {
+        // References to video elements
+        const video1 = document.getElementById('video1');
+        const video2 = document.getElementById('video2');
+        const video3 = document.getElementById('video3');
+        const allVideos = [video1, video2, video3];
+
+        // Helper: robust play with error handling + auto-adjust (if video fails, show sweet fallback hint)
+        function playVideoWithGrace(videoElement, isReplay = false) {
+            if (!videoElement) return;
+
+            // If replay or if video is paused/ended, we try to play.
+            // Pause any other videos? Not necessary but adds cute UX: optional, but we don't force stop others
+            // but we want each click to play that specific video.
             
-            // Optional: Show a message if the site isn't live yet
-            setTimeout(function() {
-                alert('If the site doesn\'t load, it means it\'s still under construction. Please check back soon! 🚀');
-            }, 2000);
-        }
-        
-        function notifyMe() {
-            const email = document.getElementById('notifyEmail').value;
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            
-            if (!email) {
-                alert('Please enter your email address');
-                return;
-            }
-            
-            if (!emailPattern.test(email)) {
-                alert('Please enter a valid email address');
-                return;
-            }
-            
-            // Save to localStorage or send to backend (you can modify this)
-            let subscribers = JSON.parse(localStorage.getItem('subscribers') || '[]');
-            
-            if (!subscribers.includes(email)) {
-                subscribers.push(email);
-                localStorage.setItem('subscribers', JSON.stringify(subscribers));
-                alert('Thank you! We\'ll notify you when egmail.me launches! 🎉');
-                document.getElementById('notifyEmail').value = '';
+            // If video is already playing and not replay action -> do nothing (but we could re-play? but replay button separate)
+            // If it's replay OR video ended or paused, we attempt play.
+            if (isReplay) {
+                // replay: reset to start and play
+                videoElement.currentTime = 0;
+                videoElement.play().catch(handlePlayError);
             } else {
-                alert('You\'re already subscribed! We\'ll notify you soon.');
+                // normal play: if video is paused or ended or hasn't started
+                if (videoElement.paused || videoElement.ended) {
+                    videoElement.play().catch(handlePlayError);
+                } else {
+                    // already playing, but we can re-trigger? but we'll just keep playing, no big deal.
+                    // but sometimes user expects a replay via play button? We have separate replay, so fine.
+                    // For better experience: if playing, do nothing but add a little feedback? No error.
+                }
             }
-            
-            // You can also send this to your backend API here
-            // Example:
-            // fetch('/api/subscribe', {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify({ email: email })
-            // });
+
+            function handlePlayError(error) {
+                console.warn("Playback failed:", error);
+                // Create or update a friendly error tooltip under video container
+                let container = videoElement.closest('.video-item');
+                if (container) {
+                    let existingError = container.querySelector('.file-access-note');
+                    if (!existingError) {
+                        const errDiv = document.createElement('div');
+                        errDiv.className = 'error-fallback file-access-note';
+                        errDiv.style.margin = '8px 12px 12px 12px';
+                        errDiv.style.borderRadius = '40px';
+                        errDiv.innerHTML = '🌸 Oops! Video file not found at <strong>/Sdcard/shiza/</strong><br> Please place 1.mp4, 2.mp4, 3.mp4 in that folder. 🌸';
+                        const buttonRow = container.querySelector('.button-row');
+                        if (buttonRow) {
+                            buttonRow.insertAdjacentElement('afterend', errDiv);
+                        } else {
+                            container.appendChild(errDiv);
+                        }
+                        // auto remove after 5 sec? but keeps useful info
+                        setTimeout(() => {
+                            if(errDiv && errDiv.remove) errDiv.remove();
+                        }, 7000);
+                    }
+                }
+                // Also show a small console friendly tip
+            }
+        }
+
+        // Attach event listeners to all play buttons and replay buttons
+        const allPlayBtns = document.querySelectorAll('.play-btn');
+        allPlayBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const targetVideoId = btn.getAttribute('data-video');
+                const isReplayAction = btn.getAttribute('data-replay') === 'true';
+                if (targetVideoId) {
+                    const videoElem = document.getElementById(targetVideoId);
+                    if (videoElem) {
+                        // If it's replay button, pass true. else false.
+                        if (isReplayAction) {
+                            playVideoWithGrace(videoElem, true);
+                        } else {
+                            playVideoWithGrace(videoElem, false);
+                        }
+                    } else {
+                        console.warn("video element not found");
+                    }
+                }
+            });
+        });
+
+        // Optional: Auto adjust video size: videos inside containers already responsive with aspect-ratio.
+        // But also ensure that if video metadata loaded we keep object-fit contain -> always fits.
+        // additionally, we can add listeners to force resizing on window resize (already fluid).
+        window.addEventListener('resize', () => {
+            // just re-trigger nothing heavy, but video containers will adjust automatically.
+        });
+
+        // Small extra cute effect: show a little toast-like if video plays successfully
+        function showPlayFeedback(videoElem) {
+            const container = videoElem.closest('.video-item');
+            if (!container) return;
+            let feedbackSpan = container.querySelector('.play-feedback');
+            if (!feedbackSpan) {
+                feedbackSpan = document.createElement('div');
+                feedbackSpan.className = 'play-feedback';
+                feedbackSpan.style.fontSize = '0.7rem';
+                feedbackSpan.style.textAlign = 'center';
+                feedbackSpan.style.color = '#ff90aa';
+                feedbackSpan.style.marginTop = '4px';
+                feedbackSpan.style.fontWeight = '500';
+                const noteDiv = container.querySelector('.note-text');
+                if (noteDiv) noteDiv.insertAdjacentElement('afterend', feedbackSpan);
+                else container.appendChild(feedbackSpan);
+            }
+            feedbackSpan.innerHTML = '✨ playing now! ✨';
+            setTimeout(() => {
+                if (feedbackSpan) feedbackSpan.innerHTML = '';
+            }, 1200);
+        }
+
+        // Listen to play events on videos to give cute feedback
+        allVideos.forEach(vid => {
+            if(vid) {
+                vid.addEventListener('play', () => {
+                    showPlayFeedback(vid);
+                });
+                // If video can't load source due to missing file, we might show fallback after canplay fails
+                vid.addEventListener('error', (e) => {
+                    // media error (file missing / path issue)
+                    const container = vid.closest('.video-item');
+                    if (container && !container.querySelector('.perm-error-note')) {
+                        const errBox = document.createElement('div');
+                        errBox.className = 'error-fallback perm-error-note';
+                        errBox.style.margin = '6px 12px 12px 12px';
+                        errBox.innerHTML = '💔 Video file not accessible.<br> Please save 1.mp4 / 2.mp4 / 3.mp4 in <strong>/Sdcard/shiza/</strong> 💔';
+                        const row = container.querySelector('.button-row');
+                        if(row) row.insertAdjacentElement('afterend', errBox);
+                        else container.appendChild(errBox);
+                        setTimeout(() => {
+                            if(errBox && errBox.remove) errBox.remove();
+                        }, 8000);
+                    }
+                });
+            }
+        });
+
+        // For initial load: if videos sources are valid, preload friendly but no autoplay.
+        // Also we can add a cute hover effect on video container
+        const containers = document.querySelectorAll('.vid-container');
+        containers.forEach(container => {
+            container.addEventListener('mouseenter', () => {
+                container.style.transition = 'all 0.2s';
+                container.style.boxShadow = '0 0 0 3px rgba(255, 140, 170, 0.4)';
+            });
+            container.addEventListener('mouseleave', () => {
+                container.style.boxShadow = 'none';
+            });
+        });
+
+        // ensure that videos that are already loaded can be played manually. plus handle ios quirks: playsinline already added.
+        // Additional professionalism: when any video starts, pause others? maybe nice to avoid overlapping audio? 
+        // optional but cute: pause other videos when one starts playing to not have mixed sounds
+        function pauseOtherVideos(currentVideo) {
+            allVideos.forEach(video => {
+                if (video && video !== currentVideo && !video.paused) {
+                    video.pause();
+                }
+            });
+        }
+
+        allVideos.forEach(video => {
+            if (video) {
+                video.addEventListener('play', function() {
+                    pauseOtherVideos(this);
+                });
+            }
+        });
+
+        // Cute message: on page load show a little floating heart animation via console? not needed.
+        // Add document ready cute floating element
+        const style = document.createElement('style');
+        style.textContent = `
+            .play-btn {
+                transition: transform 0.1s, box-shadow 0.1s;
+            }
+            .play-btn:hover {
+                transform: scale(1.02);
+                background: linear-gradient(115deg, #ff98b2, #ff7b9c);
+                cursor: pointer;
+            }
+            video {
+                transition: filter 0.3s;
+            }
+            video:hover {
+                filter: brightness(1.02);
+            }
+        `;
+        document.head.appendChild(style);
+
+        // small dynamic greeting by name
+        const titleElement = document.querySelector('.hero h1 span');
+        if(titleElement) {
+            // subtle pulse effect already in css
         }
         
-        // Add smooth scroll and animation on load
-        window.addEventListener('load', function() {
-            console.log('🚀 egmail.me landing page loaded');
-            
-            // Check if sites are reachable (optional)
-            function checkSite(url) {
-                fetch(url, { mode: 'no-cors' })
-                    .then(() => console.log(`${url} is reachable`))
-                    .catch(() => console.log(`${url} is not yet available`));
+        // Also, if the user taps on video itself, we can make it play/pause? Not needed but optional add?
+        // Let's add for extra cuteness: double click on video plays from start? but we keep clean.
+        // Instead: click on video container will behave like play button? maybe confusing, but we can bind simple.
+        // better: Click on video will play/pause? Actually user may expect. add but not override.
+        allVideos.forEach(video => {
+            if(video) {
+                video.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    if (video.paused) {
+                        video.play().catch(()=>{});
+                    } else {
+                        video.pause();
+                    }
+                });
             }
-            
-            // Uncomment to check site status (may show CORS errors in console, that's normal)
-            // checkSite('https://www.egmail.me');
-            // checkSite('https://www.ogmail.me');
         });
         
-        // Add some interactive hover effects
-        const buttons = document.querySelectorAll('.btn');
-        buttons.forEach(btn => {
-            btn.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-2px)';
-            });
-            btn.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-            });
-        });
-    </script>
+        // final: if file paths are correct, videos will load. For user clarity, display info message about location.
+        // Add a small info bubble at bottom.
+        const infoDiv = document.createElement('div');
+        infoDiv.style.position = 'fixed';
+        infoDiv.style.bottom = '12px';
+        infoDiv.style.left = '12px';
+        infoDiv.style.background = 'rgba(255,220,230,0.85)';
+        infoDiv.style.backdropFilter = 'blur(5px)';
+        infoDiv.style.padding = '5px 12px';
+        infoDiv.style.borderRadius = '60px';
+        infoDiv.style.fontSize = '11px';
+        infoDiv.style.fontWeight = '500';
+        infoDiv.style.color = '#b14b6b';
+        infoDiv.style.fontFamily = 'monospace';
+        infoDiv.style.zIndex = '99';
+        infoDiv.style.pointerEvents = 'none';
+        infoDiv.innerHTML = '📁 Videos path: /Sdcard/shiza/1.mp4 , 2.mp4 , 3.mp4';
+        document.body.appendChild(infoDiv);
+        setTimeout(() => {
+            infoDiv.style.opacity = '0.7';
+            setTimeout(() => {
+                if(infoDiv && infoDiv.remove) infoDiv.remove();
+            }, 8000);
+        }, 5000);
+    })();
+</script>
 </body>
 </html>
